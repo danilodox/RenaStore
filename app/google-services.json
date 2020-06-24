@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1094441720126",
+    "firebase_url": "https://renastore-1ccc8.firebaseio.com",
+    "project_id": "renastore-1ccc8",
+    "storage_bucket": "renastore-1ccc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094441720126:android:304e672b5b9d815281346f",
+        "android_client_info": {
+          "package_name": "com.br.renastore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1094441720126-60f57vam7fdtdi01nvav3n866rl4hsor.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.br.renastore",
+            "certificate_hash": "ffc794ecdf805228381997d6d4090b0481d2063f"
+          }
+        },
+        {
+          "client_id": "1094441720126-9951v6rkv6oo6g9r4fphh0n0vd0g3uu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjO0AhOVpkLBlkhU9bmtt-JF7A3iZQPC8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1094441720126-9951v6rkv6oo6g9r4fphh0n0vd0g3uu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

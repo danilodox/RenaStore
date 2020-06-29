@@ -12,7 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.br.renastore.activity.R;
+import com.br.renastore.R;
+
 
 public class HomeFragment extends Fragment {
 

@@ -10,11 +10,14 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.br.renastore.R;
@@ -23,12 +26,23 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
+import com.synnapps.carouselview.CarouselView;
+import com.synnapps.carouselview.ImageClickListener;
+import com.synnapps.carouselview.ImageListener;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private FirebaseAuth autenticacao;
+    private int[] carousel_imagens = new int[] {
+      R.drawable.carousel_camisa1, R.drawable.carousel_camisa2, R.drawable.carousel_camisa3, R.drawable.carousel_camisa4, R.drawable.carousel_camisa5,
+    };
+    private String[] carousel_titles = new String[]{
+            "shirt1", "shirt2", "shirt3", "shirt4", "shirt5"
+    };
+
+
 
 
     @Override
@@ -38,6 +52,12 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        configureCarousel();
+
+
+
+
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //configuracao de objetos
@@ -54,6 +74,23 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void configureCarousel (){
+        final CarouselView carouselView = findViewById(R.id.carousel);
+        carouselView.setPageCount(carousel_imagens.length);
+        carouselView.setImageListener(new ImageListener() {
+            @Override
+            public void setImageForPosition(int position, ImageView imageView) {
+                imageView.setImageResource(carousel_imagens[position]);
+            }
+        });
+        carouselView.setImageClickListener(new ImageClickListener() {
+            @Override
+            public void onClick(int position) {
+                Toast.makeText(MainActivity.this, carousel_titles[position], Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 /*
     /**
